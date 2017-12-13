@@ -20,7 +20,12 @@
       "site_name": "Docs",
       "customized_template_paths": [
         "_dependentPackages/uref.plugins/content"
-      ]
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
