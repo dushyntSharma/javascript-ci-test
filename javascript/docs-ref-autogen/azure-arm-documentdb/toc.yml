@@ -1,6 +1,0 @@
-- uid: azure-arm-documentdb.DatabaseAccounts
-  name: DatabaseAccounts
-- uid: azure-arm-documentdb.DocumentdbManagementClient
-  name: DocumentdbManagementClient
-- uid: "azure-arm-documentdb.The List operation response, that contains the database accounts and their\rproperties."
-  name: "The List operation response, that contains the database accounts and their\rproperties."
