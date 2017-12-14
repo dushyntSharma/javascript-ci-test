@@ -62,7 +62,7 @@
   ],
   "JoinTOCPlugin": [
     {
-      "TopLevelTOC": "docs-ref-autogen/toc.yml",
+      "TopLevelTOC": "javascript/docs-ref-autogen/toc.yml",
       "ContainerPageMetadata": {
         "langs": ["js"]
       },
