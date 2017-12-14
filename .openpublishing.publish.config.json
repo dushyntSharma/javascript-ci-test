@@ -12,6 +12,7 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
+        "LandingData": "Content",
         "UniversalReference": "Content"
       },
       "build_entry_point": "docs",
@@ -58,5 +59,14 @@
       "target_framework": "net45",
       "version": "latest"
     }
-  ]
+  ],
+  "JoinTOCPlugin": [
+    {
+      "ReferenceTOC": "docs-ref-autogen/toc.yml",
+      "ContainerPageMetadata": {
+        "langs": ["js"]
+      },
+      "ContainerPageYamlMime": "YamlMime:UniversalReference"
+    }
+  ],
 }
