@@ -43,7 +43,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-appinsights.ApplicationInsightsManagementClient
+            - undefinedApplicationInsightsManagementClient
           description: Reference to the service client.
       content: new ExportConfigurations(client)
     langs:
@@ -808,8 +808,3 @@ items:
         exportProperties, options, optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-appinsights.ApplicationInsightsManagementClient
-    name: ApplicationInsightsManagementClient
-    fullName: azure-arm-appinsights.ApplicationInsightsManagementClient
-    isExternal: false

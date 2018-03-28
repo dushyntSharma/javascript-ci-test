@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-insights.InsightsClient
+            - undefinedInsightsClient
           description: Reference to the service client.
       content: new MetricDefinitions(client)
     langs:
@@ -138,8 +138,3 @@ items:
       content: 'function list(resourceUri, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-insights.InsightsClient
-    name: InsightsClient
-    fullName: azure-insights.InsightsClient
-    isExternal: false

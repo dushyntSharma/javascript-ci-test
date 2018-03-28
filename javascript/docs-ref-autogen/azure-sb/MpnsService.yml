@@ -48,7 +48,7 @@ items:
       parameters:
         - id: notificationHubService
           type:
-            - azure-sb.NotificationHubService
+            - undefinedNotificationHubService
           description: The notification hub service.
       content: new MpnsService(notificationHubService)
     langs:
@@ -1099,8 +1099,3 @@ items:
         callback)
     langs:
       - js
-references:
-  - uid: azure-sb.NotificationHubService
-    name: NotificationHubService
-    fullName: azure-sb.NotificationHubService
-    isExternal: false

@@ -65,7 +65,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-mobileengagement.MobileEngagementClient
+            - undefinedMobileEngagementClient
           description: Reference to the service client.
       content: new ExportTasks(client)
     langs:
@@ -2089,8 +2089,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-mobileengagement.MobileEngagementClient
-    name: MobileEngagementClient
-    fullName: azure-arm-mobileengagement.MobileEngagementClient
-    isExternal: false

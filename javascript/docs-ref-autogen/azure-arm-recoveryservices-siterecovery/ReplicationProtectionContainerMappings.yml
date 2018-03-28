@@ -13,7 +13,7 @@ items:
         azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
       path: >-
         lib\services\recoveryServicesSiteRecoveryManagement\lib\operations\replicationProtectionContainerMappings.js
-      startLine: 1542
+      startLine: 1497
       remote:
         branch: master
         path: >-
@@ -84,8 +84,7 @@ items:
       parameters:
         - id: client
           type:
-            - >-
-              azure-arm-recoveryservices-siterecovery.SiteRecoveryManagementClient
+            - undefinedSiteRecoveryManagementClient
           description: Reference to the service client.
       content: new ReplicationProtectionContainerMappings(client)
     langs:
@@ -97,13 +96,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      deleteMethodWithHttpOperationResponse(resourceName, resourceGroupName,
-      fabricName, protectionContainerName, mappingName, removalInput, options)
+      deleteMethodWithHttpOperationResponse(fabricName, protectionContainerName,
+      mappingName, removalInput, options)
     summary: "Remove protection container mapping.\r\rThe operation to delete or remove a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.deleteMethodWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      removalInput, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.deleteMethodWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, removalInput, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -116,14 +114,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -170,9 +160,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function deleteMethodWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, mappingName,
-        removalInput, options)
+        function deleteMethodWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, removalInput, options)
     langs:
       - js
   - uid: >-
@@ -182,14 +171,13 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      deleteMethod(resourceName, resourceGroupName, fabricName,
+      deleteMethod(fabricName, protectionContainerName, mappingName,
+      removalInput, options, optionalCallback)
+    summary: "Remove protection container mapping.\r\rThe operation to delete or remove a protection container mapping."
+    fullName: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.deleteMethod(fabricName,
       protectionContainerName, mappingName, removalInput, options,
       optionalCallback)
-    summary: "Remove protection container mapping.\r\rThe operation to delete or remove a protection container mapping."
-    fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.deleteMethod(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      removalInput, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -202,14 +190,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -262,9 +242,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function deleteMethod(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, removalInput, options,
-        optionalCallback)
+        function deleteMethod(fabricName, protectionContainerName, mappingName,
+        removalInput, options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -274,13 +253,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      getWithHttpOperationResponse(resourceName, resourceGroupName, fabricName,
-      protectionContainerName, mappingName, options)
+      getWithHttpOperationResponse(fabricName, protectionContainerName,
+      mappingName, options)
     summary: "Gets a protection container mapping/\r\rGets the details of a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.getWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.getWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -297,14 +275,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -332,8 +302,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function getWithHttpOperationResponse(resourceName, resourceGroupName,
-        fabricName, protectionContainerName, mappingName, options)
+        function getWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, options)
     langs:
       - js
   - uid: >-
@@ -343,13 +313,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      get(resourceName, resourceGroupName, fabricName, protectionContainerName,
-      mappingName, options, optionalCallback)
+      get(fabricName, protectionContainerName, mappingName, options,
+      optionalCallback)
     summary: "Gets a protection container mapping/\r\rGets the details of a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.get(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.get(fabricName,
+      protectionContainerName, mappingName, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -362,14 +331,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -403,8 +364,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function get(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, options, optionalCallback)
+        function get(fabricName, protectionContainerName, mappingName, options,
+        optionalCallback)
     langs:
       - js
   - uid: >-
@@ -414,13 +375,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      createWithHttpOperationResponse(resourceName, resourceGroupName,
-      fabricName, protectionContainerName, mappingName, creationInput, options)
+      createWithHttpOperationResponse(fabricName, protectionContainerName,
+      mappingName, creationInput, options)
     summary: "Create protection container mapping.\r\rThe operation to create a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.createWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      creationInput, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.createWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, creationInput, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -437,14 +397,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -501,9 +453,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function createWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, mappingName,
-        creationInput, options)
+        function createWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, creationInput, options)
     langs:
       - js
   - uid: >-
@@ -513,14 +464,13 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      create(resourceName, resourceGroupName, fabricName,
+      create(fabricName, protectionContainerName, mappingName, creationInput,
+      options, optionalCallback)
+    summary: "Create protection container mapping.\r\rThe operation to create a protection container mapping."
+    fullName: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.create(fabricName,
       protectionContainerName, mappingName, creationInput, options,
       optionalCallback)
-    summary: "Create protection container mapping.\r\rThe operation to create a protection container mapping."
-    fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.create(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      creationInput, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -533,14 +483,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -603,9 +545,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function create(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, creationInput, options,
-        optionalCallback)
+        function create(fabricName, protectionContainerName, mappingName,
+        creationInput, options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -615,13 +556,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      purgeWithHttpOperationResponse(resourceName, resourceGroupName,
-      fabricName, protectionContainerName, mappingName, options)
+      purgeWithHttpOperationResponse(fabricName, protectionContainerName,
+      mappingName, options)
     summary: "Purge protection container mapping.\r\rThe operation to purge(force delete) a protection container mapping"
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.purgeWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.purgeWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -634,14 +574,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -669,8 +601,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function purgeWithHttpOperationResponse(resourceName, resourceGroupName,
-        fabricName, protectionContainerName, mappingName, options)
+        function purgeWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, options)
     langs:
       - js
   - uid: >-
@@ -680,13 +612,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      purge(resourceName, resourceGroupName, fabricName,
-      protectionContainerName, mappingName, options, optionalCallback)
+      purge(fabricName, protectionContainerName, mappingName, options,
+      optionalCallback)
     summary: "Purge protection container mapping.\r\rThe operation to purge(force delete) a protection container mapping"
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.purge(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.purge(fabricName,
+      protectionContainerName, mappingName, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -699,14 +630,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -740,8 +663,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function purge(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, options, optionalCallback)
+        function purge(fabricName, protectionContainerName, mappingName,
+        options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -751,12 +674,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      listByReplicationProtectionContainersWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, options)
+      listByReplicationProtectionContainersWithHttpOperationResponse(fabricName,
+      protectionContainerName, options)
     summary: "Gets the list of protection container mappings for a protection\rcontainer.\r\rLists the protection container mappings for a protection container."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.listByReplicationProtectionContainersWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.listByReplicationProtectionContainersWithHttpOperationResponse(fabricName,
+      protectionContainerName, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -773,14 +696,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -805,8 +720,8 @@ items:
         description: A promise is returned
       content: >-
         function
-        listByReplicationProtectionContainersWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, options)
+        listByReplicationProtectionContainersWithHttpOperationResponse(fabricName,
+        protectionContainerName, options)
     langs:
       - js
   - uid: >-
@@ -816,13 +731,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      listByReplicationProtectionContainers(resourceName, resourceGroupName,
-      fabricName, protectionContainerName, options, optionalCallback)
+      listByReplicationProtectionContainers(fabricName, protectionContainerName,
+      options, optionalCallback)
     summary: "Gets the list of protection container mappings for a protection\rcontainer.\r\rLists the protection container mappings for a protection container."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.listByReplicationProtectionContainers(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, options,
-      optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.listByReplicationProtectionContainers(fabricName,
+      protectionContainerName, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -839,14 +753,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -876,9 +782,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function listByReplicationProtectionContainers(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, options,
-        optionalCallback)
+        function listByReplicationProtectionContainers(fabricName,
+        protectionContainerName, options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -887,11 +792,10 @@ items:
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings#listWithHttpOperationResponse
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
-    name: 'listWithHttpOperationResponse(resourceName, resourceGroupName, options)'
+    name: listWithHttpOperationResponse(options)
     summary: "Gets the list of all protection container mappings in a vault.\r\rLists the protection container mappings in the vault."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.listWithHttpOperationResponse(resourceName,
-      resourceGroupName, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.listWithHttpOperationResponse(options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -908,14 +812,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: options
           type:
             - object
@@ -930,9 +826,7 @@ items:
         type:
           - Promise
         description: A promise is returned
-      content: >-
-        function listWithHttpOperationResponse(resourceName, resourceGroupName,
-        options)
+      content: function listWithHttpOperationResponse(options)
     langs:
       - js
   - uid: >-
@@ -941,11 +835,11 @@ items:
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings#list
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
-    name: 'list(resourceName, resourceGroupName, options, optionalCallback)'
+    name: 'list(options, optionalCallback)'
     summary: "Gets the list of all protection container mappings in a vault.\r\rLists the protection container mappings in the vault."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.list(resourceName,
-      resourceGroupName, options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.list(options,
+      optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -962,14 +856,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: options
           type:
             - object
@@ -990,9 +876,7 @@ items:
           - function
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
-      content: >-
-        function list(resourceName, resourceGroupName, options,
-        optionalCallback)
+      content: 'function list(options, optionalCallback)'
     langs:
       - js
   - uid: >-
@@ -1002,14 +886,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      beginDeleteMethodWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      removalInput, options)
+      beginDeleteMethodWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, removalInput, options)
     summary: "Remove protection container mapping.\r\rThe operation to delete or remove a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginDeleteMethodWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      removalInput, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginDeleteMethodWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, removalInput, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -1022,14 +904,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -1076,9 +950,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function beginDeleteMethodWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, mappingName,
-        removalInput, options)
+        function beginDeleteMethodWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, removalInput, options)
     langs:
       - js
   - uid: >-
@@ -1088,14 +961,13 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      beginDeleteMethod(resourceName, resourceGroupName, fabricName,
-      protectionContainerName, mappingName, removalInput, options,
-      optionalCallback)
+      beginDeleteMethod(fabricName, protectionContainerName, mappingName,
+      removalInput, options, optionalCallback)
     summary: "Remove protection container mapping.\r\rThe operation to delete or remove a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginDeleteMethod(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      removalInput, options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginDeleteMethod(fabricName,
+      protectionContainerName, mappingName, removalInput, options,
+      optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -1108,14 +980,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -1168,9 +1032,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function beginDeleteMethod(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, removalInput, options,
-        optionalCallback)
+        function beginDeleteMethod(fabricName, protectionContainerName,
+        mappingName, removalInput, options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -1180,13 +1043,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      beginCreateWithHttpOperationResponse(resourceName, resourceGroupName,
-      fabricName, protectionContainerName, mappingName, creationInput, options)
+      beginCreateWithHttpOperationResponse(fabricName, protectionContainerName,
+      mappingName, creationInput, options)
     summary: "Create protection container mapping.\r\rThe operation to create a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginCreateWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      creationInput, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginCreateWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, creationInput, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -1203,14 +1065,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -1267,9 +1121,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function beginCreateWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, mappingName,
-        creationInput, options)
+        function beginCreateWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, creationInput, options)
     langs:
       - js
   - uid: >-
@@ -1279,14 +1132,13 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      beginCreate(resourceName, resourceGroupName, fabricName,
-      protectionContainerName, mappingName, creationInput, options,
-      optionalCallback)
+      beginCreate(fabricName, protectionContainerName, mappingName,
+      creationInput, options, optionalCallback)
     summary: "Create protection container mapping.\r\rThe operation to create a protection container mapping."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginCreate(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      creationInput, options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginCreate(fabricName,
+      protectionContainerName, mappingName, creationInput, options,
+      optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -1299,14 +1151,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -1369,9 +1213,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function beginCreate(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, creationInput, options,
-        optionalCallback)
+        function beginCreate(fabricName, protectionContainerName, mappingName,
+        creationInput, options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -1381,13 +1224,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      beginPurgeWithHttpOperationResponse(resourceName, resourceGroupName,
-      fabricName, protectionContainerName, mappingName, options)
+      beginPurgeWithHttpOperationResponse(fabricName, protectionContainerName,
+      mappingName, options)
     summary: "Purge protection container mapping.\r\rThe operation to purge(force delete) a protection container mapping"
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginPurgeWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      options)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginPurgeWithHttpOperationResponse(fabricName,
+      protectionContainerName, mappingName, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -1400,14 +1242,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -1435,9 +1269,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function beginPurgeWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, protectionContainerName, mappingName,
-        options)
+        function beginPurgeWithHttpOperationResponse(fabricName,
+        protectionContainerName, mappingName, options)
     langs:
       - js
   - uid: >-
@@ -1447,13 +1280,12 @@ items:
     parent: >-
       azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings
     name: >-
-      beginPurge(resourceName, resourceGroupName, fabricName,
-      protectionContainerName, mappingName, options, optionalCallback)
+      beginPurge(fabricName, protectionContainerName, mappingName, options,
+      optionalCallback)
     summary: "Purge protection container mapping.\r\rThe operation to purge(force delete) a protection container mapping"
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginPurge(resourceName,
-      resourceGroupName, fabricName, protectionContainerName, mappingName,
-      options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationProtectionContainerMappings.beginPurge(fabricName,
+      protectionContainerName, mappingName, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -1466,14 +1298,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -1507,8 +1331,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function beginPurge(resourceName, resourceGroupName, fabricName,
-        protectionContainerName, mappingName, options, optionalCallback)
+        function beginPurge(fabricName, protectionContainerName, mappingName,
+        options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -1724,8 +1548,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-recoveryservices-siterecovery.SiteRecoveryManagementClient
-    name: SiteRecoveryManagementClient
-    fullName: azure-arm-recoveryservices-siterecovery.SiteRecoveryManagementClient
-    isExternal: false

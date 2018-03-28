@@ -41,7 +41,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-website.WebSiteManagementClient
+            - undefinedWebSiteManagementClient
           description: Reference to the service client.
       content: new WebHostingPlanOperations(client)
     langs:

@@ -82,7 +82,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-resource.ManagementLockClient
+            - undefinedManagementLockClient
           description: Reference to the service client.
       content: new ManagementLocks(client)
     langs:
@@ -2296,8 +2296,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-resource.ManagementLockClient
-    name: ManagementLockClient
-    fullName: azure-arm-resource.ManagementLockClient
-    isExternal: false

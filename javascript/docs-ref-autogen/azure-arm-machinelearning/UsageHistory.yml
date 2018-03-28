@@ -35,7 +35,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-machinelearning.AzureMLCommitmentPlansManagementClient
+            - undefinedAzureMLCommitmentPlansManagementClient
           description: Reference to the service client.
       content: new UsageHistory(client)
     langs:
@@ -248,8 +248,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-machinelearning.AzureMLCommitmentPlansManagementClient
-    name: AzureMLCommitmentPlansManagementClient
-    fullName: azure-arm-machinelearning.AzureMLCommitmentPlansManagementClient
-    isExternal: false

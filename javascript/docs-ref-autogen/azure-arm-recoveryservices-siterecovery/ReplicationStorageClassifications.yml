@@ -10,7 +10,7 @@ items:
         azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
       path: >-
         lib\services\recoveryServicesSiteRecoveryManagement\lib\operations\replicationStorageClassifications.js
-      startLine: 742
+      startLine: 727
       remote:
         branch: master
         path: >-
@@ -56,8 +56,7 @@ items:
       parameters:
         - id: client
           type:
-            - >-
-              azure-arm-recoveryservices-siterecovery.SiteRecoveryManagementClient
+            - undefinedSiteRecoveryManagementClient
           description: Reference to the service client.
       content: new ReplicationStorageClassifications(client)
     langs:
@@ -68,12 +67,12 @@ items:
       azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#getWithHttpOperationResponse
     parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
     name: >-
-      getWithHttpOperationResponse(resourceName, resourceGroupName, fabricName,
-      storageClassificationName, options)
+      getWithHttpOperationResponse(fabricName, storageClassificationName,
+      options)
     summary: "Gets the details of a storage classification.\r\rGets the details of the specified storage classification."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.getWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, storageClassificationName, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.getWithHttpOperationResponse(fabricName,
+      storageClassificationName, options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -90,14 +89,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -121,8 +112,8 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function getWithHttpOperationResponse(resourceName, resourceGroupName,
-        fabricName, storageClassificationName, options)
+        function getWithHttpOperationResponse(fabricName,
+        storageClassificationName, options)
     langs:
       - js
   - uid: >-
@@ -130,14 +121,11 @@ items:
     id: >-
       azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#get
     parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
-    name: >-
-      get(resourceName, resourceGroupName, fabricName,
-      storageClassificationName, options, optionalCallback)
+    name: 'get(fabricName, storageClassificationName, options, optionalCallback)'
     summary: "Gets the details of a storage classification.\r\rGets the details of the specified storage classification."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.get(resourceName,
-      resourceGroupName, fabricName, storageClassificationName, options,
-      optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.get(fabricName,
+      storageClassificationName, options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -150,14 +138,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -187,8 +167,8 @@ items:
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
       content: >-
-        function get(resourceName, resourceGroupName, fabricName,
-        storageClassificationName, options, optionalCallback)
+        function get(fabricName, storageClassificationName, options,
+        optionalCallback)
     langs:
       - js
   - uid: >-
@@ -196,13 +176,11 @@ items:
     id: >-
       azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listByReplicationFabricsWithHttpOperationResponse
     parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
-    name: >-
-      listByReplicationFabricsWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, options)
+    name: 'listByReplicationFabricsWithHttpOperationResponse(fabricName, options)'
     summary: "Gets the list of storage classification objects under a fabric.\r\rLists the storage classifications available in the specified fabric."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.listByReplicationFabricsWithHttpOperationResponse(resourceName,
-      resourceGroupName, fabricName, options)
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.listByReplicationFabricsWithHttpOperationResponse(fabricName,
+      options)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -219,14 +197,6 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
         - id: fabricName
           type:
             - string
@@ -246,134 +216,20 @@ items:
           - Promise
         description: A promise is returned
       content: >-
-        function listByReplicationFabricsWithHttpOperationResponse(resourceName,
-        resourceGroupName, fabricName, options)
-    langs:
-      - js
-  - uid: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listByReplicationFabrics
-    id: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listByReplicationFabrics
-    parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
-    name: >-
-      listByReplicationFabrics(resourceName, resourceGroupName, fabricName,
-      options, optionalCallback)
-    summary: "Gets the list of storage classification objects under a fabric.\r\rLists the storage classifications available in the specified fabric."
-    fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.listByReplicationFabrics(resourceName,
-      resourceGroupName, fabricName, options, optionalCallback)
-    tags:
-      - originalTitle: resolve
-        title: resolve
-        text: '{StorageClassificationCollection} - The deserialized result object.'
-        value: '{StorageClassificationCollection} - The deserialized result object.'
-      - originalTitle: reject
-        title: reject
-        text: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link StorageClassificationCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-        value: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link StorageClassificationCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
-    type: Function
-    syntax:
-      parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
-        - id: fabricName
-          type:
-            - string
-          description: Site name of interest.
-        - id: options
-          type:
-            - object
-          description: Optional Parameters.
-          optional: true
-        - id: options.customHeaders
-          type:
-            - object
-          description: "Headers that will be added to the\rrequest"
-          optional: true
-        - id: optionalCallback
-          type:
-            - function
-          description: The optional callback.
-          optional: true
-      return:
-        type:
-          - function
-          - Promise
-        description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
-      content: >-
-        function listByReplicationFabrics(resourceName, resourceGroupName,
-        fabricName, options, optionalCallback)
-    langs:
-      - js
-  - uid: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listWithHttpOperationResponse
-    id: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listWithHttpOperationResponse
-    parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
-    name: 'listWithHttpOperationResponse(resourceName, resourceGroupName, options)'
-    summary: "Gets the list of storage classification objects under a vault.\r\rLists the storage classifications in the vault."
-    fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.listWithHttpOperationResponse(resourceName,
-      resourceGroupName, options)
-    tags:
-      - originalTitle: resolve
-        title: resolve
-        text: >-
-          {HttpOperationResponse<StorageClassificationCollection>} - The
-          deserialized result object.
-        value: >-
-          {HttpOperationResponse<StorageClassificationCollection>} - The
-          deserialized result object.
-      - originalTitle: reject
-        title: reject
-        text: '{Error} - The error object.'
-        value: '{Error} - The error object.'
-    type: Function
-    syntax:
-      parameters:
-        - id: resourceName
-          type:
-            - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
-        - id: options
-          type:
-            - object
-          description: Optional Parameters.
-          optional: true
-        - id: options.customHeaders
-          type:
-            - object
-          description: "Headers that will be added to the\rrequest"
-          optional: true
-      return:
-        type:
-          - Promise
-        description: A promise is returned
-      content: >-
-        function listWithHttpOperationResponse(resourceName, resourceGroupName,
+        function listByReplicationFabricsWithHttpOperationResponse(fabricName,
         options)
     langs:
       - js
   - uid: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#list
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listByReplicationFabrics
     id: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#list
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listByReplicationFabrics
     parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
-    name: 'list(resourceName, resourceGroupName, options, optionalCallback)'
-    summary: "Gets the list of storage classification objects under a vault.\r\rLists the storage classifications in the vault."
+    name: 'listByReplicationFabrics(fabricName, options, optionalCallback)'
+    summary: "Gets the list of storage classification objects under a fabric.\r\rLists the storage classifications available in the specified fabric."
     fullName: >-
-      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.list(resourceName,
-      resourceGroupName, options, optionalCallback)
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.listByReplicationFabrics(fabricName,
+      options, optionalCallback)
     tags:
       - originalTitle: resolve
         title: resolve
@@ -386,14 +242,10 @@ items:
     type: Function
     syntax:
       parameters:
-        - id: resourceName
+        - id: fabricName
           type:
             - string
-          description: The name of the recovery services vault.
-        - id: resourceGroupName
-          type:
-            - string
-          description: "The name of the resource group where the\rrecovery services vault is present."
+          description: Site name of interest.
         - id: options
           type:
             - object
@@ -414,9 +266,94 @@ items:
           - function
           - Promise
         description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
-      content: >-
-        function list(resourceName, resourceGroupName, options,
-        optionalCallback)
+      content: 'function listByReplicationFabrics(fabricName, options, optionalCallback)'
+    langs:
+      - js
+  - uid: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listWithHttpOperationResponse
+    id: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#listWithHttpOperationResponse
+    parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
+    name: listWithHttpOperationResponse(options)
+    summary: "Gets the list of storage classification objects under a vault.\r\rLists the storage classifications in the vault."
+    fullName: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.listWithHttpOperationResponse(options)
+    tags:
+      - originalTitle: resolve
+        title: resolve
+        text: >-
+          {HttpOperationResponse<StorageClassificationCollection>} - The
+          deserialized result object.
+        value: >-
+          {HttpOperationResponse<StorageClassificationCollection>} - The
+          deserialized result object.
+      - originalTitle: reject
+        title: reject
+        text: '{Error} - The error object.'
+        value: '{Error} - The error object.'
+    type: Function
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - object
+          description: Optional Parameters.
+          optional: true
+        - id: options.customHeaders
+          type:
+            - object
+          description: "Headers that will be added to the\rrequest"
+          optional: true
+      return:
+        type:
+          - Promise
+        description: A promise is returned
+      content: function listWithHttpOperationResponse(options)
+    langs:
+      - js
+  - uid: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#list
+    id: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications#list
+    parent: azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications
+    name: 'list(options, optionalCallback)'
+    summary: "Gets the list of storage classification objects under a vault.\r\rLists the storage classifications in the vault."
+    fullName: >-
+      azure-arm-recoveryservices-siterecovery.ReplicationStorageClassifications.list(options,
+      optionalCallback)
+    tags:
+      - originalTitle: resolve
+        title: resolve
+        text: '{StorageClassificationCollection} - The deserialized result object.'
+        value: '{StorageClassificationCollection} - The deserialized result object.'
+      - originalTitle: reject
+        title: reject
+        text: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link StorageClassificationCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+        value: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link StorageClassificationCollection} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+    type: Function
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - object
+          description: Optional Parameters.
+          optional: true
+        - id: options.customHeaders
+          type:
+            - object
+          description: "Headers that will be added to the\rrequest"
+          optional: true
+        - id: optionalCallback
+          type:
+            - function
+          description: The optional callback.
+          optional: true
+      return:
+        type:
+          - function
+          - Promise
+        description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
+      content: 'function list(options, optionalCallback)'
     langs:
       - js
   - uid: >-
@@ -618,8 +555,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-recoveryservices-siterecovery.SiteRecoveryManagementClient
-    name: SiteRecoveryManagementClient
-    fullName: azure-arm-recoveryservices-siterecovery.SiteRecoveryManagementClient
-    isExternal: false

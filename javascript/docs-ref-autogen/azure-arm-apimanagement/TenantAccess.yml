@@ -39,7 +39,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-apimanagement.ApiManagementClient
+            - undefinedApiManagementClient
           description: Reference to the service client.
       content: new TenantAccess(client)
     langs:
@@ -188,7 +188,7 @@ items:
         - id: ifMatch
           type:
             - string
-          description: "The entity state (Etag) version of the property to\rupdate. A value of \"*\" can be used for If-Match to unconditionally apply the\roperation."
+          description: "ETag of the Entity. ETag should match the current\rentity state from the header response of the GET request or it should be *\rfor unconditional update."
         - id: options
           type:
             - object
@@ -250,7 +250,7 @@ items:
         - id: ifMatch
           type:
             - string
-          description: "The entity state (Etag) version of the property to\rupdate. A value of \"*\" can be used for If-Match to unconditionally apply the\roperation."
+          description: "ETag of the Entity. ETag should match the current\rentity state from the header response of the GET request or it should be *\rfor unconditional update."
         - id: options
           type:
             - object
@@ -490,8 +490,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-apimanagement.ApiManagementClient
-    name: ApiManagementClient
-    fullName: azure-arm-apimanagement.ApiManagementClient
-    isExternal: false

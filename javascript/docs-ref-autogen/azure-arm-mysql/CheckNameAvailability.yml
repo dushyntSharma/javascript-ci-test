@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-mysql.MySQLManagementClient
+            - undefinedMySQLManagementClient
           description: Reference to the service client.
       content: new CheckNameAvailability(client)
     langs:
@@ -150,8 +150,3 @@ items:
       content: 'function execute(nameAvailabilityRequest, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-mysql.MySQLManagementClient
-    name: MySQLManagementClient
-    fullName: azure-arm-mysql.MySQLManagementClient
-    isExternal: false

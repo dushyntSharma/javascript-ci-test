@@ -48,7 +48,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-automation.AutomationClient
+            - undefinedAutomationClient
           description: Reference to the service client.
       content: new RunbookOperations(client)
     langs:
@@ -1119,8 +1119,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-automation.AutomationClient
-    name: AutomationClient
-    fullName: azure-arm-automation.AutomationClient
-    isExternal: false

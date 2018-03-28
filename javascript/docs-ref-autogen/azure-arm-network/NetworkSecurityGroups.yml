@@ -60,7 +60,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-network.NetworkManagementClient
+            - undefinedNetworkManagementClient
           description: Reference to the service client.
       content: new NetworkSecurityGroups(client)
     langs:
@@ -1414,8 +1414,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-network.NetworkManagementClient
-    name: NetworkManagementClient
-    fullName: azure-arm-network.NetworkManagementClient
-    isExternal: false

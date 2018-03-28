@@ -46,7 +46,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-devtestlabs.DevTestLabsClient
+            - undefinedDevTestLabsClient
           description: Reference to the service client.
       content: new CustomImages(client)
     langs:
@@ -1213,8 +1213,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-devtestlabs.DevTestLabsClient
-    name: DevTestLabsClient
-    fullName: azure-arm-devtestlabs.DevTestLabsClient
-    isExternal: false

@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-monitor.MonitorClient
+            - undefinedMonitorClient
           description: Reference to the service client.
       content: new UsageMetrics(client)
     langs:
@@ -146,8 +146,3 @@ items:
       content: 'function list(resourceUri, apiVersion, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-monitor.MonitorClient
-    name: MonitorClient
-    fullName: azure-monitor.MonitorClient
-    isExternal: false

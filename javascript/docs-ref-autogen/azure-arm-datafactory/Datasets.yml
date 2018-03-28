@@ -40,7 +40,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-datafactory.DataFactoryManagementClient
+            - undefinedDataFactoryManagementClient
           description: Reference to the service client.
       content: new Datasets(client)
     langs:
@@ -669,8 +669,3 @@ items:
       content: 'function listByFactoryNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-datafactory.DataFactoryManagementClient
-    name: DataFactoryManagementClient
-    fullName: azure-arm-datafactory.DataFactoryManagementClient
-    isExternal: false

@@ -44,7 +44,7 @@ items:
           description: "The cluster dns name against which the job\rmanagement is to be performed."
         - id: credentials
           type:
-            - azure-asm-hdinsight.BasicAuthenticationCloudCredentials
+            - undefinedBasicAuthenticationCloudCredentials
           description: "Basic\rauthentication credentials for job submission."
         - id: credentials.username
           type:

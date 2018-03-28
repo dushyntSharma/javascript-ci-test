@@ -38,7 +38,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-authorization.AuthorizationManagementClient
+            - undefinedAuthorizationManagementClient
           description: Reference to the service client.
       content: new ClassicAdministrators(client)
     langs:
@@ -231,8 +231,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-authorization.AuthorizationManagementClient
-    name: AuthorizationManagementClient
-    fullName: azure-arm-authorization.AuthorizationManagementClient
-    isExternal: false

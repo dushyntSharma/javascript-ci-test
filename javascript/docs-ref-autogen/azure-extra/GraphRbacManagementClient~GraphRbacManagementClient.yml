@@ -42,7 +42,7 @@ items:
           description: Gets or sets the tenant Id.
         - id: credentials
           type:
-            - azure-extra.SubscriptionCloudCredentials
+            - undefinedSubscriptionCloudCredentials
           description: "Gets subscription\rcredentials which uniquely identify Microsoft Azure subscription. The\rsubscription ID forms part of the URI for every service call."
         - id: credentials.subscriptionId
           type:

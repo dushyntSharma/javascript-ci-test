@@ -57,7 +57,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-relay.RelayManagementClient
+            - undefinedRelayManagementClient
           description: Reference to the service client.
       content: new WCFRelays(client)
     langs:
@@ -1525,8 +1525,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-relay.RelayManagementClient
-    name: RelayManagementClient
-    fullName: azure-arm-relay.RelayManagementClient
-    isExternal: false

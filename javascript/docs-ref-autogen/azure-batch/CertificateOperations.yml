@@ -42,7 +42,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-batch.BatchServiceClient
+            - undefinedBatchServiceClient
           description: Reference to the service client.
       content: new CertificateOperations(client)
     langs:
@@ -999,8 +999,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-batch.BatchServiceClient
-    name: BatchServiceClient
-    fullName: azure-batch.BatchServiceClient
-    isExternal: false

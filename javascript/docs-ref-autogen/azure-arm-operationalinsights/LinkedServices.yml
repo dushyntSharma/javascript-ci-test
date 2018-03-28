@@ -43,7 +43,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-operationalinsights.OperationalInsightsManagementClient
+            - undefinedOperationalInsightsManagementClient
           description: Reference to the service client.
       content: new LinkedServices(client)
     langs:
@@ -532,8 +532,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-operationalinsights.OperationalInsightsManagementClient
-    name: OperationalInsightsManagementClient
-    fullName: azure-arm-operationalinsights.OperationalInsightsManagementClient
-    isExternal: false

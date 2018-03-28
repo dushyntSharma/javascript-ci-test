@@ -45,7 +45,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-search.SearchServiceClient
+            - undefinedSearchServiceClient
           description: Reference to the service client.
       content: new Indexers(client)
     langs:
@@ -1264,8 +1264,3 @@ items:
       content: 'function getStatus(indexerName, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-search.SearchServiceClient
-    name: SearchServiceClient
-    fullName: azure-search.SearchServiceClient
-    isExternal: false

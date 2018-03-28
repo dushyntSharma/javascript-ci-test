@@ -57,7 +57,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-intune.IntuneResourceManagementClient
+            - undefinedIntuneResourceManagementClient
           description: Reference to the service client.
       content: new Ios(client)
     langs:
@@ -2029,8 +2029,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-intune.IntuneResourceManagementClient
-    name: IntuneResourceManagementClient
-    fullName: azure-arm-intune.IntuneResourceManagementClient
-    isExternal: false

@@ -43,8 +43,7 @@ items:
       parameters:
         - id: client
           type:
-            - >-
-              azure-arm-storsimple8000series.StorSimple8000SeriesManagementClient
+            - undefinedStorSimple8000SeriesManagementClient
           description: Reference to the service client.
       content: new HardwareComponentGroups(client)
     langs:
@@ -526,8 +525,3 @@ items:
         options, optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-storsimple8000series.StorSimple8000SeriesManagementClient
-    name: StorSimple8000SeriesManagementClient
-    fullName: azure-arm-storsimple8000series.StorSimple8000SeriesManagementClient
-    isExternal: false

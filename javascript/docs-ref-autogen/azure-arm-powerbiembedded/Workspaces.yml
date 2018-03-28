@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient
+            - undefinedPowerBIEmbeddedManagementClient
           description: Reference to the service client.
       content: new Workspaces(client)
     langs:
@@ -144,8 +144,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient
-    name: PowerBIEmbeddedManagementClient
-    fullName: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient
-    isExternal: false

@@ -39,7 +39,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-customerinsights.CustomerInsightsManagementClient
+            - undefinedCustomerInsightsManagementClient
           description: Reference to the service client.
       content: new Views(client)
     langs:
@@ -646,8 +646,3 @@ items:
       content: 'function listByHubNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-customerinsights.CustomerInsightsManagementClient
-    name: CustomerInsightsManagementClient
-    fullName: azure-arm-customerinsights.CustomerInsightsManagementClient
-    isExternal: false

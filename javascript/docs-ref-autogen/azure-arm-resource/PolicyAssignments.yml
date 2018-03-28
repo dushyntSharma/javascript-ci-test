@@ -60,7 +60,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-resource.PolicyClient
+            - undefinedPolicyClient
           description: Reference to the service client.
       content: new PolicyAssignments(client)
     langs:
@@ -1510,8 +1510,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-resource.PolicyClient
-    name: PolicyClient
-    fullName: azure-arm-resource.PolicyClient
-    isExternal: false

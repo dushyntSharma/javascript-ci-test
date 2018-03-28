@@ -84,7 +84,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-datalake-store.DataLakeStoreFileSystemManagementClient
+            - undefinedDataLakeStoreFileSystemManagementClient
           description: Reference to the service client.
       content: new FileSystem(client)
     langs:
@@ -2659,8 +2659,3 @@ items:
       content: 'function setPermission(accountName, path, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-datalake-store.DataLakeStoreFileSystemManagementClient
-    name: DataLakeStoreFileSystemManagementClient
-    fullName: azure-arm-datalake-store.DataLakeStoreFileSystemManagementClient
-    isExternal: false

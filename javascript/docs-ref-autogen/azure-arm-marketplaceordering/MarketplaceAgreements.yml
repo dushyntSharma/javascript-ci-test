@@ -38,7 +38,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-marketplaceordering.MarketplaceOrderingAgreements
+            - undefinedMarketplaceOrderingAgreements
           description: Reference to the service client.
       content: new MarketplaceAgreements(client)
     langs:
@@ -226,8 +226,8 @@ items:
           optional: true
         - id: parameters.retrieveDatetime
           type:
-            - date
-          description: "Date and time in UTC of when the\rterms were accepted. This is empty if Accepted is false."
+            - string
+          description: "Date and time in UTC of when\rthe terms were accepted. This is empty if Accepted is false."
           optional: true
         - id: parameters.signature
           type:
@@ -323,8 +323,8 @@ items:
           optional: true
         - id: parameters.retrieveDatetime
           type:
-            - date
-          description: "Date and time in UTC of when the\rterms were accepted. This is empty if Accepted is false."
+            - string
+          description: "Date and time in UTC of when\rthe terms were accepted. This is empty if Accepted is false."
           optional: true
         - id: parameters.signature
           type:
@@ -361,8 +361,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-marketplaceordering.MarketplaceOrderingAgreements
-    name: MarketplaceOrderingAgreements
-    fullName: azure-arm-marketplaceordering.MarketplaceOrderingAgreements
-    isExternal: false

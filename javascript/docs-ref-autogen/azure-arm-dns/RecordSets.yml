@@ -45,7 +45,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-dns.DnsManagementClient
+            - undefinedDnsManagementClient
           description: Reference to the service client.
       content: new RecordSets(client)
     langs:
@@ -1455,8 +1455,3 @@ items:
       content: 'function listByDnsZoneNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-dns.DnsManagementClient
-    name: DnsManagementClient
-    fullName: azure-arm-dns.DnsManagementClient
-    isExternal: false

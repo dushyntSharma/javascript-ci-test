@@ -37,7 +37,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-servermanagement.ServerManagement
+            - undefinedServerManagement
           description: Reference to the service client.
       content: new Session(client)
     langs:
@@ -598,8 +598,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-servermanagement.ServerManagement
-    name: ServerManagement
-    fullName: azure-arm-servermanagement.ServerManagement
-    isExternal: false

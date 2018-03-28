@@ -69,7 +69,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-analysisservices.AnalysisServicesManagementClient
+            - undefinedAnalysisServicesManagementClient
           description: Reference to the service client.
       content: new Servers(client)
     langs:
@@ -2411,8 +2411,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-analysisservices.AnalysisServicesManagementClient
-    name: AnalysisServicesManagementClient
-    fullName: azure-arm-analysisservices.AnalysisServicesManagementClient
-    isExternal: false

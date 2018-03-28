@@ -67,7 +67,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-machinelearning.AzureMLWebServicesManagementClient
+            - undefinedAzureMLWebServicesManagementClient
           description: Reference to the service client.
       content: new WebServices(client)
     langs:
@@ -3033,8 +3033,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-machinelearning.AzureMLWebServicesManagementClient
-    name: AzureMLWebServicesManagementClient
-    fullName: azure-arm-machinelearning.AzureMLWebServicesManagementClient
-    isExternal: false

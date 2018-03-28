@@ -41,7 +41,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-visualstudio.VisualStudioResourceProviderClient
+            - undefinedVisualStudioResourceProviderClient
           description: Reference to the service client.
       content: new Accounts(client)
     langs:
@@ -628,8 +628,3 @@ items:
       content: 'function get(resourceGroupName, resourceName, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-visualstudio.VisualStudioResourceProviderClient
-    name: VisualStudioResourceProviderClient
-    fullName: azure-arm-visualstudio.VisualStudioResourceProviderClient
-    isExternal: false

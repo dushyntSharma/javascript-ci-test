@@ -56,7 +56,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-automation.AutomationClient
+            - undefinedAutomationClient
           description: Reference to the service client.
       content: new AutomationAccountOperations(client)
     langs:
@@ -1022,8 +1022,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-automation.AutomationClient
-    name: AutomationClient
-    fullName: azure-arm-automation.AutomationClient
-    isExternal: false

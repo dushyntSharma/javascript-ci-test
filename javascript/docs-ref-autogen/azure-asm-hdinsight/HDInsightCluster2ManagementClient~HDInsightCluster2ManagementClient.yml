@@ -48,7 +48,7 @@ items:
           description: ''
         - id: credentials
           type:
-            - azure-asm-hdinsight.SubscriptionCloudCredentials
+            - undefinedSubscriptionCloudCredentials
           description: "Gets subscription\rcredentials which uniquely identify Microsoft Azure subscription. The\rsubscription ID forms part of the URI for every service call."
         - id: credentials.subscriptionId
           type:

@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-commerce.UsageManagementClient
+            - undefinedUsageManagementClient
           description: Reference to the service client.
       content: new RateCard(client)
     langs:
@@ -124,8 +124,3 @@ items:
       content: 'function get(filter, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-commerce.UsageManagementClient
-    name: UsageManagementClient
-    fullName: azure-arm-commerce.UsageManagementClient
-    isExternal: false

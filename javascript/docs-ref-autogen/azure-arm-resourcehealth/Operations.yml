@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-resourcehealth.MicrosoftResourceHealth
+            - undefinedMicrosoftResourceHealth
           description: Reference to the service client.
       content: new Operations(client)
     langs:
@@ -116,8 +116,3 @@ items:
       content: 'function list(options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-resourcehealth.MicrosoftResourceHealth
-    name: MicrosoftResourceHealth
-    fullName: azure-arm-resourcehealth.MicrosoftResourceHealth
-    isExternal: false

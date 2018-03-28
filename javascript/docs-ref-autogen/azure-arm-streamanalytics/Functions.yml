@@ -52,7 +52,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-streamanalytics.StreamAnalyticsManagementClient
+            - undefinedStreamAnalyticsManagementClient
           description: Reference to the service client.
       content: new Functions(client)
     langs:
@@ -1276,8 +1276,3 @@ items:
       content: 'function listByStreamingJobNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-streamanalytics.StreamAnalyticsManagementClient
-    name: StreamAnalyticsManagementClient
-    fullName: azure-arm-streamanalytics.StreamAnalyticsManagementClient
-    isExternal: false

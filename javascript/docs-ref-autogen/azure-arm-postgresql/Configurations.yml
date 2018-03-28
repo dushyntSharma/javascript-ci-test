@@ -40,7 +40,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-postgresql.PostgreSQLManagementClient
+            - undefinedPostgreSQLManagementClient
           description: Reference to the service client.
       content: new Configurations(client)
     langs:
@@ -559,8 +559,3 @@ items:
         configurationName, parameters, options, optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-postgresql.PostgreSQLManagementClient
-    name: PostgreSQLManagementClient
-    fullName: azure-arm-postgresql.PostgreSQLManagementClient
-    isExternal: false

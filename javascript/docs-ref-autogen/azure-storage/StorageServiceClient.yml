@@ -58,7 +58,7 @@ items:
           description: The host for the service.
         - id: usePathStyleUri
           type:
-            - azure-storage.bool
+            - undefinedbool
           description: Boolean value indicating wether to use path style uris.
         - id: sasToken
           type:

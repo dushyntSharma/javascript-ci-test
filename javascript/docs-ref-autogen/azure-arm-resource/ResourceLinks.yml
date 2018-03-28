@@ -47,7 +47,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-resource.ManagementLinkClient
+            - undefinedManagementLinkClient
           description: Reference to the service client.
       content: new ResourceLinks(client)
     langs:
@@ -751,8 +751,3 @@ items:
       content: 'function listAtSourceScopeNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-resource.ManagementLinkClient
-    name: ManagementLinkClient
-    fullName: azure-arm-resource.ManagementLinkClient
-    isExternal: false

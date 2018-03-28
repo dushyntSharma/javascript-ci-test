@@ -61,7 +61,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-compute.ComputeManagementClient
+            - undefinedComputeManagementClient
           description: Reference to the service client.
       content: new VirtualMachineVMImageOperations(client)
     langs:

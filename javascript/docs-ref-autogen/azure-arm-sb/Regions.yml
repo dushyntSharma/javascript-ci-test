@@ -33,7 +33,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-sb.ServiceBusManagementClient
+            - undefinedServiceBusManagementClient
           description: Reference to the service client.
       content: new Regions(client)
     langs:
@@ -218,8 +218,3 @@ items:
       content: 'function listBySkuNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-sb.ServiceBusManagementClient
-    name: ServiceBusManagementClient
-    fullName: azure-arm-sb.ServiceBusManagementClient
-    isExternal: false

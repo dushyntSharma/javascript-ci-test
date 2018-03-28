@@ -9,7 +9,7 @@ items:
       id: azure-arm-website.AppServiceCertificateOrders
       path: >-
         lib\services\webSiteManagement2\lib\operations\appServiceCertificateOrders.js
-      startLine: 3628
+      startLine: 4054
       remote:
         branch: master
         path: >-
@@ -38,6 +38,9 @@ items:
         azure-arm-website.AppServiceCertificateOrders#deleteMethodWithHttpOperationResponse
       - 'azure-arm-website.AppServiceCertificateOrders#deleteMethod'
       - >-
+        azure-arm-website.AppServiceCertificateOrders#updateWithHttpOperationResponse
+      - 'azure-arm-website.AppServiceCertificateOrders#update'
+      - >-
         azure-arm-website.AppServiceCertificateOrders#listCertificatesWithHttpOperationResponse
       - 'azure-arm-website.AppServiceCertificateOrders#listCertificates'
       - >-
@@ -49,6 +52,9 @@ items:
       - >-
         azure-arm-website.AppServiceCertificateOrders#deleteCertificateWithHttpOperationResponse
       - 'azure-arm-website.AppServiceCertificateOrders#deleteCertificate'
+      - >-
+        azure-arm-website.AppServiceCertificateOrders#updateCertificateWithHttpOperationResponse
+      - 'azure-arm-website.AppServiceCertificateOrders#updateCertificate'
       - >-
         azure-arm-website.AppServiceCertificateOrders#reissueWithHttpOperationResponse
       - 'azure-arm-website.AppServiceCertificateOrders#reissue'
@@ -104,7 +110,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-website.WebSiteManagementClient
+            - undefinedWebSiteManagementClient
           description: Reference to the service client.
       content: new AppServiceCertificateOrders(client)
     langs:
@@ -250,7 +256,6 @@ items:
           type:
             - string
           description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
-          optional: true
         - id: appServiceCertificateOrder.autoRenew
           type:
             - boolean
@@ -345,7 +350,6 @@ items:
           type:
             - string
           description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
-          optional: true
         - id: appServiceCertificateOrder.autoRenew
           type:
             - boolean
@@ -666,8 +670,7 @@ items:
         - id: certificateDistinguishedName.productType
           type:
             - string
-          description: "Certificate\rproduct type. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
-          optional: true
+          description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
         - id: certificateDistinguishedName.autoRenew
           type:
             - boolean
@@ -769,8 +772,7 @@ items:
         - id: certificateDistinguishedName.productType
           type:
             - string
-          description: "Certificate\rproduct type. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
-          optional: true
+          description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
         - id: certificateDistinguishedName.autoRenew
           type:
             - boolean
@@ -924,6 +926,203 @@ items:
       content: >-
         function deleteMethod(resourceGroupName, certificateOrderName, options,
         optionalCallback)
+    langs:
+      - js
+  - uid: >-
+      azure-arm-website.AppServiceCertificateOrders#updateWithHttpOperationResponse
+    id: >-
+      azure-arm-website.AppServiceCertificateOrders#updateWithHttpOperationResponse
+    parent: azure-arm-website.AppServiceCertificateOrders
+    name: >-
+      updateWithHttpOperationResponse(resourceGroupName, certificateOrderName,
+      certificateDistinguishedName, options)
+    summary: "Create or update a certificate purchase order.\r\rCreate or update a certificate purchase order."
+    fullName: >-
+      azure-arm-website.AppServiceCertificateOrders.updateWithHttpOperationResponse(resourceGroupName,
+      certificateOrderName, certificateDistinguishedName, options)
+    tags:
+      - originalTitle: resolve
+        title: resolve
+        text: >-
+          {HttpOperationResponse<AppServiceCertificateOrder>} - The deserialized
+          result object.
+        value: >-
+          {HttpOperationResponse<AppServiceCertificateOrder>} - The deserialized
+          result object.
+      - originalTitle: reject
+        title: reject
+        text: '{Error} - The error object.'
+        value: '{Error} - The error object.'
+    type: Function
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Name of the resource group to which the\rresource belongs."
+        - id: certificateOrderName
+          type:
+            - string
+          description: Name of the certificate order.
+        - id: certificateDistinguishedName
+          type:
+            - object
+          description: "Distinguished name to to use\rfor the certificate order."
+        - id: certificateDistinguishedName.certificates
+          type:
+            - object
+          description: "State of the Key\rVault secret."
+          optional: true
+        - id: certificateDistinguishedName.distinguishedName
+          type:
+            - string
+          description: "Certificate\rdistinguished name."
+          optional: true
+        - id: certificateDistinguishedName.validityInYears
+          type:
+            - number
+          description: "Duration in\ryears (must be between 1 and 3)."
+          optional: true
+        - id: certificateDistinguishedName.keySize
+          type:
+            - number
+          description: Certificate key size.
+          optional: true
+        - id: certificateDistinguishedName.productType
+          type:
+            - string
+          description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
+        - id: certificateDistinguishedName.autoRenew
+          type:
+            - boolean
+          description: "<code>true</code>\rif the certificate should be automatically renewed when it expires;\rotherwise, <code>false</code>."
+          optional: true
+        - id: certificateDistinguishedName.csr
+          type:
+            - string
+          description: "Last CSR that was created\rfor this order."
+          optional: true
+        - id: certificateDistinguishedName.kind
+          type:
+            - string
+          description: Kind of resource.
+          optional: true
+        - id: options
+          type:
+            - object
+          description: Optional Parameters.
+          optional: true
+        - id: options.customHeaders
+          type:
+            - object
+          description: "Headers that will be added to the\rrequest"
+          optional: true
+      return:
+        type:
+          - Promise
+        description: A promise is returned
+      content: >-
+        function updateWithHttpOperationResponse(resourceGroupName,
+        certificateOrderName, certificateDistinguishedName, options)
+    langs:
+      - js
+  - uid: 'azure-arm-website.AppServiceCertificateOrders#update'
+    id: 'azure-arm-website.AppServiceCertificateOrders#update'
+    parent: azure-arm-website.AppServiceCertificateOrders
+    name: >-
+      update(resourceGroupName, certificateOrderName,
+      certificateDistinguishedName, options, optionalCallback)
+    summary: "Create or update a certificate purchase order.\r\rCreate or update a certificate purchase order."
+    fullName: >-
+      azure-arm-website.AppServiceCertificateOrders.update(resourceGroupName,
+      certificateOrderName, certificateDistinguishedName, options,
+      optionalCallback)
+    tags:
+      - originalTitle: resolve
+        title: resolve
+        text: '{AppServiceCertificateOrder} - The deserialized result object.'
+        value: '{AppServiceCertificateOrder} - The deserialized result object.'
+      - originalTitle: reject
+        title: reject
+        text: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link AppServiceCertificateOrder} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+        value: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link AppServiceCertificateOrder} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+    type: Function
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Name of the resource group to which the\rresource belongs."
+        - id: certificateOrderName
+          type:
+            - string
+          description: Name of the certificate order.
+        - id: certificateDistinguishedName
+          type:
+            - object
+          description: "Distinguished name to to use\rfor the certificate order."
+        - id: certificateDistinguishedName.certificates
+          type:
+            - object
+          description: "State of the Key\rVault secret."
+          optional: true
+        - id: certificateDistinguishedName.distinguishedName
+          type:
+            - string
+          description: "Certificate\rdistinguished name."
+          optional: true
+        - id: certificateDistinguishedName.validityInYears
+          type:
+            - number
+          description: "Duration in\ryears (must be between 1 and 3)."
+          optional: true
+        - id: certificateDistinguishedName.keySize
+          type:
+            - number
+          description: Certificate key size.
+          optional: true
+        - id: certificateDistinguishedName.productType
+          type:
+            - string
+          description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
+        - id: certificateDistinguishedName.autoRenew
+          type:
+            - boolean
+          description: "<code>true</code>\rif the certificate should be automatically renewed when it expires;\rotherwise, <code>false</code>."
+          optional: true
+        - id: certificateDistinguishedName.csr
+          type:
+            - string
+          description: "Last CSR that was created\rfor this order."
+          optional: true
+        - id: certificateDistinguishedName.kind
+          type:
+            - string
+          description: Kind of resource.
+          optional: true
+        - id: options
+          type:
+            - object
+          description: Optional Parameters.
+          optional: true
+        - id: options.customHeaders
+          type:
+            - object
+          description: "Headers that will be added to the\rrequest"
+          optional: true
+        - id: optionalCallback
+          type:
+            - function
+          description: The optional callback.
+          optional: true
+      return:
+        type:
+          - function
+          - Promise
+        description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
+      content: >-
+        function update(resourceGroupName, certificateOrderName,
+        certificateDistinguishedName, options, optionalCallback)
     langs:
       - js
   - uid: >-
@@ -1446,6 +1645,163 @@ items:
     langs:
       - js
   - uid: >-
+      azure-arm-website.AppServiceCertificateOrders#updateCertificateWithHttpOperationResponse
+    id: >-
+      azure-arm-website.AppServiceCertificateOrders#updateCertificateWithHttpOperationResponse
+    parent: azure-arm-website.AppServiceCertificateOrders
+    name: >-
+      updateCertificateWithHttpOperationResponse(resourceGroupName,
+      certificateOrderName, name, keyVaultCertificate, options)
+    summary: "Creates or updates a certificate and associates with key vault\rsecret.\r\rCreates or updates a certificate and associates with key vault secret."
+    fullName: >-
+      azure-arm-website.AppServiceCertificateOrders.updateCertificateWithHttpOperationResponse(resourceGroupName,
+      certificateOrderName, name, keyVaultCertificate, options)
+    tags:
+      - originalTitle: resolve
+        title: resolve
+        text: >-
+          {HttpOperationResponse<AppServiceCertificateResource>} - The
+          deserialized result object.
+        value: >-
+          {HttpOperationResponse<AppServiceCertificateResource>} - The
+          deserialized result object.
+      - originalTitle: reject
+        title: reject
+        text: '{Error} - The error object.'
+        value: '{Error} - The error object.'
+    type: Function
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Name of the resource group to which the\rresource belongs."
+        - id: certificateOrderName
+          type:
+            - string
+          description: Name of the certificate order.
+        - id: name
+          type:
+            - string
+          description: Name of the certificate.
+        - id: keyVaultCertificate
+          type:
+            - object
+          description: Key vault certificate resource Id.
+        - id: keyVaultCertificate.keyVaultId
+          type:
+            - string
+          description: Key Vault resource Id.
+          optional: true
+        - id: keyVaultCertificate.keyVaultSecretName
+          type:
+            - string
+          description: "Key Vault secret\rname."
+          optional: true
+        - id: keyVaultCertificate.kind
+          type:
+            - string
+          description: Kind of resource.
+          optional: true
+        - id: options
+          type:
+            - object
+          description: Optional Parameters.
+          optional: true
+        - id: options.customHeaders
+          type:
+            - object
+          description: "Headers that will be added to the\rrequest"
+          optional: true
+      return:
+        type:
+          - Promise
+        description: A promise is returned
+      content: >-
+        function updateCertificateWithHttpOperationResponse(resourceGroupName,
+        certificateOrderName, name, keyVaultCertificate, options)
+    langs:
+      - js
+  - uid: 'azure-arm-website.AppServiceCertificateOrders#updateCertificate'
+    id: 'azure-arm-website.AppServiceCertificateOrders#updateCertificate'
+    parent: azure-arm-website.AppServiceCertificateOrders
+    name: >-
+      updateCertificate(resourceGroupName, certificateOrderName, name,
+      keyVaultCertificate, options, optionalCallback)
+    summary: "Creates or updates a certificate and associates with key vault\rsecret.\r\rCreates or updates a certificate and associates with key vault secret."
+    fullName: >-
+      azure-arm-website.AppServiceCertificateOrders.updateCertificate(resourceGroupName,
+      certificateOrderName, name, keyVaultCertificate, options,
+      optionalCallback)
+    tags:
+      - originalTitle: resolve
+        title: resolve
+        text: '{AppServiceCertificateResource} - The deserialized result object.'
+        value: '{AppServiceCertificateResource} - The deserialized result object.'
+      - originalTitle: reject
+        title: reject
+        text: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link AppServiceCertificateResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+        value: "{Error} - The error object.\r\r{function} optionalCallback(err, result, request, response)\r\r                     {Error}  err        - The Error object if an error occurred, null otherwise.\r\r                     {object} [result]   - The deserialized result object if an error did not occur.\r                     See {@link AppServiceCertificateResource} for more\r                     information.\r\r                     {object} [request]  - The HTTP Request object if an error did not occur.\r\r                     {stream} [response] - The HTTP Response stream if an error did not occur."
+    type: Function
+    syntax:
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Name of the resource group to which the\rresource belongs."
+        - id: certificateOrderName
+          type:
+            - string
+          description: Name of the certificate order.
+        - id: name
+          type:
+            - string
+          description: Name of the certificate.
+        - id: keyVaultCertificate
+          type:
+            - object
+          description: Key vault certificate resource Id.
+        - id: keyVaultCertificate.keyVaultId
+          type:
+            - string
+          description: Key Vault resource Id.
+          optional: true
+        - id: keyVaultCertificate.keyVaultSecretName
+          type:
+            - string
+          description: "Key Vault secret\rname."
+          optional: true
+        - id: keyVaultCertificate.kind
+          type:
+            - string
+          description: Kind of resource.
+          optional: true
+        - id: options
+          type:
+            - object
+          description: Optional Parameters.
+          optional: true
+        - id: options.customHeaders
+          type:
+            - object
+          description: "Headers that will be added to the\rrequest"
+          optional: true
+        - id: optionalCallback
+          type:
+            - function
+          description: The optional callback.
+          optional: true
+      return:
+        type:
+          - function
+          - Promise
+        description: "If a callback was passed as the last parameter\rthen it returns the callback else returns a Promise.\r\r{Promise} A promise is returned"
+      content: >-
+        function updateCertificate(resourceGroupName, certificateOrderName,
+        name, keyVaultCertificate, options, optionalCallback)
+    langs:
+      - js
+  - uid: >-
       azure-arm-website.AppServiceCertificateOrders#reissueWithHttpOperationResponse
     id: >-
       azure-arm-website.AppServiceCertificateOrders#reissueWithHttpOperationResponse
@@ -1505,15 +1861,6 @@ items:
           type:
             - string
           description: Kind of resource.
-          optional: true
-        - id: reissueCertificateOrderRequest.location
-          type:
-            - string
-          description: Resource Location.
-        - id: reissueCertificateOrderRequest.tags
-          type:
-            - object
-          description: Resource tags.
           optional: true
         - id: options
           type:
@@ -1593,15 +1940,6 @@ items:
           type:
             - string
           description: Kind of resource.
-          optional: true
-        - id: reissueCertificateOrderRequest.location
-          type:
-            - string
-          description: Resource Location.
-        - id: reissueCertificateOrderRequest.tags
-          type:
-            - object
-          description: Resource tags.
           optional: true
         - id: options
           type:
@@ -1684,15 +2022,6 @@ items:
             - string
           description: Kind of resource.
           optional: true
-        - id: renewCertificateOrderRequest.location
-          type:
-            - string
-          description: Resource Location.
-        - id: renewCertificateOrderRequest.tags
-          type:
-            - object
-          description: Resource tags.
-          optional: true
         - id: options
           type:
             - object
@@ -1766,15 +2095,6 @@ items:
           type:
             - string
           description: Kind of resource.
-          optional: true
-        - id: renewCertificateOrderRequest.location
-          type:
-            - string
-          description: Resource Location.
-        - id: renewCertificateOrderRequest.tags
-          type:
-            - object
-          description: Resource tags.
           optional: true
         - id: options
           type:
@@ -2062,12 +2382,12 @@ items:
         - id: siteSealRequest.lightTheme
           type:
             - boolean
-          description: Theme
+          description: "If <code>true</code> use the\rlight color theme for site seal; otherwise, use the default color theme."
           optional: true
         - id: siteSealRequest.locale
           type:
             - string
-          description: Locale
+          description: Locale of site seal.
           optional: true
         - id: options
           type:
@@ -2125,12 +2445,12 @@ items:
         - id: siteSealRequest.lightTheme
           type:
             - boolean
-          description: Theme
+          description: "If <code>true</code> use the\rlight color theme for site seal; otherwise, use the default color theme."
           optional: true
         - id: siteSealRequest.locale
           type:
             - string
-          description: Locale
+          description: Locale of site seal.
           optional: true
         - id: options
           type:
@@ -2543,8 +2863,7 @@ items:
         - id: certificateDistinguishedName.productType
           type:
             - string
-          description: "Certificate\rproduct type. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
-          optional: true
+          description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
         - id: certificateDistinguishedName.autoRenew
           type:
             - boolean
@@ -2646,8 +2965,7 @@ items:
         - id: certificateDistinguishedName.productType
           type:
             - string
-          description: "Certificate\rproduct type. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
-          optional: true
+          description: "Certificate product\rtype. Possible values include: 'StandardDomainValidatedSsl',\r'StandardDomainValidatedWildCardSsl'"
         - id: certificateDistinguishedName.autoRenew
           type:
             - boolean
@@ -3172,8 +3490,3 @@ items:
       content: 'function listCertificatesNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-website.WebSiteManagementClient
-    name: WebSiteManagementClient
-    fullName: azure-arm-website.WebSiteManagementClient
-    isExternal: false

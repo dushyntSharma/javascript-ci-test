@@ -37,7 +37,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-logic.LogicManagementClient
+            - undefinedLogicManagementClient
           description: Reference to the service client.
       content: new WorkflowRuns(client)
     langs:
@@ -480,8 +480,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-logic.LogicManagementClient
-    name: LogicManagementClient
-    fullName: azure-arm-logic.LogicManagementClient
-    isExternal: false

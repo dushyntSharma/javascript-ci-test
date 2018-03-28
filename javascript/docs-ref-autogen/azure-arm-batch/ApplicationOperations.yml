@@ -42,7 +42,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-batch.BatchManagementClient
+            - undefinedBatchManagementClient
           description: Reference to the service client.
       content: new ApplicationOperations(client)
     langs:
@@ -769,8 +769,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-batch.BatchManagementClient
-    name: BatchManagementClient
-    fullName: azure-arm-batch.BatchManagementClient
-    isExternal: false

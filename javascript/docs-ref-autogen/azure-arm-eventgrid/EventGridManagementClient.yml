@@ -31,7 +31,7 @@ items:
       parameters:
         - id: credentials
           type:
-            - azure-arm-eventgrid.credentials
+            - undefinedcredentials
           description: Credentials needed for the client to connect to Azure.
         - id: subscriptionId
           type:

@@ -38,7 +38,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-insights.InsightsManagementClient
+            - undefinedInsightsManagementClient
           description: Reference to the service client.
       content: new AlertRules(client)
     langs:
@@ -551,8 +551,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-insights.InsightsManagementClient
-    name: InsightsManagementClient
-    fullName: azure-arm-insights.InsightsManagementClient
-    isExternal: false

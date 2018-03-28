@@ -39,7 +39,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-advisor.AdvisorManagementClient
+            - undefinedAdvisorManagementClient
           description: Reference to the service client.
       content: new Suppressions(client)
     langs:
@@ -604,8 +604,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-advisor.AdvisorManagementClient
-    name: AdvisorManagementClient
-    fullName: azure-arm-advisor.AdvisorManagementClient
-    isExternal: false

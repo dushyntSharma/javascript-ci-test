@@ -47,7 +47,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-datalake-store.DataLakeStoreAccountManagementClient
+            - undefinedDataLakeStoreAccountManagementClient
           description: Reference to the service client.
       content: new TrustedIdProviders(client)
     langs:
@@ -776,8 +776,3 @@ items:
       content: 'function listByAccountNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-datalake-store.DataLakeStoreAccountManagementClient
-    name: DataLakeStoreAccountManagementClient
-    fullName: azure-arm-datalake-store.DataLakeStoreAccountManagementClient
-    isExternal: false

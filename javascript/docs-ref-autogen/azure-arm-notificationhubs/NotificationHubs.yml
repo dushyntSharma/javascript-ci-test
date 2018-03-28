@@ -73,7 +73,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-notificationhubs.NotificationHubsManagementClient
+            - undefinedNotificationHubsManagementClient
           description: Reference to the service client.
       content: new NotificationHubs(client)
     langs:
@@ -2346,8 +2346,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-notificationhubs.NotificationHubsManagementClient
-    name: NotificationHubsManagementClient
-    fullName: azure-arm-notificationhubs.NotificationHubsManagementClient
-    isExternal: false

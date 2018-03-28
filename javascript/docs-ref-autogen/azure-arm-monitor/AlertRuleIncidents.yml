@@ -34,7 +34,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-monitor.MonitorManagementClient
+            - undefinedMonitorManagementClient
           description: Reference to the service client.
       content: new AlertRuleIncidents(client)
     langs:
@@ -257,8 +257,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-monitor.MonitorManagementClient
-    name: MonitorManagementClient
-    fullName: azure-arm-monitor.MonitorManagementClient
-    isExternal: false

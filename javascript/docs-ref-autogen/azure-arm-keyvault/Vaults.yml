@@ -54,7 +54,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-keyvault.KeyVaultManagementClient
+            - undefinedKeyVaultManagementClient
           description: Reference to the service client.
       content: new Vaults(client)
     langs:
@@ -1347,8 +1347,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-keyvault.KeyVaultManagementClient
-    name: KeyVaultManagementClient
-    fullName: azure-arm-keyvault.KeyVaultManagementClient
-    isExternal: false

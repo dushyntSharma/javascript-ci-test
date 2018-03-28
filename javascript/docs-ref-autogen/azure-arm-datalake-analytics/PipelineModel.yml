@@ -36,7 +36,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-datalake-analytics.DataLakeAnalyticsJobManagementClient
+            - undefinedDataLakeAnalyticsJobManagementClient
           description: Reference to the service client.
       content: new PipelineModel(client)
     langs:
@@ -369,8 +369,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-datalake-analytics.DataLakeAnalyticsJobManagementClient
-    name: DataLakeAnalyticsJobManagementClient
-    fullName: azure-arm-datalake-analytics.DataLakeAnalyticsJobManagementClient
-    isExternal: false

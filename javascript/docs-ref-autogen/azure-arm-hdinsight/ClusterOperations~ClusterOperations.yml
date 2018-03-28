@@ -67,7 +67,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-hdinsight.HDInsightManagementClient
+            - undefinedHDInsightManagementClient
           description: Reference to the service client.
       content: new ClusterOperations(client)
     langs:

@@ -36,7 +36,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-hdinsight.HDInsightJobManagementClient
+            - undefinedHDInsightJobManagementClient
           description: "Reference to the service\rclient."
       content: new JobOperations(client)
     langs:

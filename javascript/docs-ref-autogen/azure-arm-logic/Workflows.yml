@@ -60,7 +60,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-logic.LogicManagementClient
+            - undefinedLogicManagementClient
           description: Reference to the service client.
       content: new Workflows(client)
     langs:
@@ -1829,8 +1829,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-logic.LogicManagementClient
-    name: LogicManagementClient
-    fullName: azure-arm-logic.LogicManagementClient
-    isExternal: false

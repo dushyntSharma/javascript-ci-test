@@ -30,7 +30,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-mgmt.ManagementClient
+            - undefinedManagementClient
           description: Reference to the service client.
       content: new RoleSizeOperations(client)
     langs:

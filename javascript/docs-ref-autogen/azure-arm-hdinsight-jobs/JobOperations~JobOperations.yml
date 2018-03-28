@@ -37,7 +37,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-hdinsight-jobs.HDInsightJobManagementClient
+            - undefinedHDInsightJobManagementClient
           description: "Reference to the service\rclient."
       content: new JobOperations(client)
     langs:

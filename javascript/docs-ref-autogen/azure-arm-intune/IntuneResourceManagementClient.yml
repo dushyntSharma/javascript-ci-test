@@ -88,7 +88,7 @@ items:
       parameters:
         - id: credentials
           type:
-            - azure-arm-intune.credentials
+            - undefinedcredentials
           description: Credentials needed for the client to connect to Azure.
         - id: baseUri
           type:

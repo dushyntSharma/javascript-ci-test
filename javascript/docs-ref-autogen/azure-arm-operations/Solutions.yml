@@ -41,7 +41,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-operations.OperationsManagementClient
+            - undefinedOperationsManagementClient
           description: Reference to the service client.
       content: new Solutions(client)
     langs:
@@ -605,8 +605,3 @@ items:
       content: 'function listBySubscription(options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-operations.OperationsManagementClient
-    name: OperationsManagementClient
-    fullName: azure-arm-operations.OperationsManagementClient
-    isExternal: false

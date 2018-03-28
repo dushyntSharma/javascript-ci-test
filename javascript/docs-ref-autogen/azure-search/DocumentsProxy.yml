@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-search.SearchIndexClient
+            - undefinedSearchIndexClient
           description: Reference to the service client.
       content: new DocumentsProxy(client)
     langs:
@@ -132,8 +132,3 @@ items:
       content: 'function count(options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-search.SearchIndexClient
-    name: SearchIndexClient
-    fullName: azure-search.SearchIndexClient
-    isExternal: false

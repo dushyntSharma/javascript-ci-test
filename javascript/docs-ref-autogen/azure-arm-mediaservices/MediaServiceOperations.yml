@@ -59,7 +59,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-mediaservices.MediaServicesManagementClient
+            - undefinedMediaServicesManagementClient
           description: Reference to the service client.
       content: new MediaServiceOperations(client)
     langs:
@@ -1126,8 +1126,3 @@ items:
         parameters, options, optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-mediaservices.MediaServicesManagementClient
-    name: MediaServicesManagementClient
-    fullName: azure-arm-mediaservices.MediaServicesManagementClient
-    isExternal: false

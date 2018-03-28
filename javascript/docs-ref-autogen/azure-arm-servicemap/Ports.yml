@@ -43,7 +43,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-servicemap.ServicemapManagementClient
+            - undefinedServicemapManagementClient
           description: Reference to the service client.
       content: new Ports(client)
     langs:
@@ -814,8 +814,3 @@ items:
       content: 'function listConnectionsNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-servicemap.ServicemapManagementClient
-    name: ServicemapManagementClient
-    fullName: azure-arm-servicemap.ServicemapManagementClient
-    isExternal: false

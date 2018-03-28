@@ -34,7 +34,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-apimanagement.ApiManagementClient
+            - undefinedApiManagementClient
           description: Reference to the service client.
       content: new UserSubscription(client)
     langs:
@@ -275,8 +275,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-apimanagement.ApiManagementClient
-    name: ApiManagementClient
-    fullName: azure-arm-apimanagement.ApiManagementClient
-    isExternal: false

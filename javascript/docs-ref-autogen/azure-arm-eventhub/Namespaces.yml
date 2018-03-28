@@ -74,7 +74,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-eventhub.EventHubManagementClient
+            - undefinedEventHubManagementClient
           description: Reference to the service client.
       content: new Namespaces(client)
     langs:
@@ -1100,7 +1100,6 @@ items:
           type:
             - array
           description: The rights associated with the rule.
-          optional: true
         - id: options
           type:
             - object
@@ -1164,7 +1163,6 @@ items:
           type:
             - array
           description: The rights associated with the rule.
-          optional: true
         - id: options
           type:
             - object
@@ -2259,8 +2257,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-eventhub.EventHubManagementClient
-    name: EventHubManagementClient
-    fullName: azure-arm-eventhub.EventHubManagementClient
-    isExternal: false

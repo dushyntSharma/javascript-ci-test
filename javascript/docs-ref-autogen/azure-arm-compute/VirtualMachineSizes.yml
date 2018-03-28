@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-compute.ComputeManagementClient
+            - undefinedComputeManagementClient
           description: Reference to the service client.
       content: new VirtualMachineSizes(client)
     langs:
@@ -132,8 +132,3 @@ items:
       content: 'function list(location, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-compute.ComputeManagementClient
-    name: ComputeManagementClient
-    fullName: azure-arm-compute.ComputeManagementClient
-    isExternal: false

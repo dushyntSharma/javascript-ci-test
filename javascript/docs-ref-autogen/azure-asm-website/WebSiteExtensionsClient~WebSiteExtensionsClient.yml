@@ -49,7 +49,7 @@ items:
           description: The site name.
         - id: credentials
           type:
-            - azure-asm-website.BasicAuthenticationCloudCredentials
+            - undefinedBasicAuthenticationCloudCredentials
           description: TBD.
         - id: credentials.siteName
           type:
@@ -191,8 +191,3 @@ items:
       content: triggeredWebJobs
     langs:
       - js
-references:
-  - uid: azure-asm-website.BasicAuthenticationCloudCredentials
-    name: BasicAuthenticationCloudCredentials
-    fullName: azure-asm-website.BasicAuthenticationCloudCredentials
-    isExternal: false

@@ -41,7 +41,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-hdinsight.HDInsightCluster2ManagementClient
+            - undefinedHDInsightCluster2ManagementClient
           description: "Reference to the service\rclient."
       content: new ClusterOperations(client)
     langs:

@@ -36,8 +36,7 @@ items:
       parameters:
         - id: client
           type:
-            - >-
-              azure-arm-machinelearningcompute.MachineLearningComputeManagementClient
+            - undefinedMachineLearningComputeManagementClient
           description: Reference to the service client.
       content: new MachineLearningCompute(client)
     langs:
@@ -129,8 +128,3 @@ items:
       content: 'function listAvailableOperations(options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-machinelearningcompute.MachineLearningComputeManagementClient
-    name: MachineLearningComputeManagementClient
-    fullName: azure-arm-machinelearningcompute.MachineLearningComputeManagementClient
-    isExternal: false

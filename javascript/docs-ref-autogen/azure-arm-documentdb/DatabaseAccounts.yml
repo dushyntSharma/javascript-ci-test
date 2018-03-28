@@ -76,7 +76,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-documentdb.DocumentdbManagementClient
+            - undefinedDocumentdbManagementClient
           description: Reference to the service client.
       content: new DatabaseAccounts(client)
     langs:
@@ -2141,8 +2141,3 @@ items:
         keyToRegenerate, options, optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-documentdb.DocumentdbManagementClient
-    name: DocumentdbManagementClient
-    fullName: azure-arm-documentdb.DocumentdbManagementClient
-    isExternal: false

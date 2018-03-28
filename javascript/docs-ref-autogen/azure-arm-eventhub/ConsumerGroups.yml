@@ -42,7 +42,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-eventhub.EventHubManagementClient
+            - undefinedEventHubManagementClient
           description: Reference to the service client.
       content: new ConsumerGroups(client)
     langs:
@@ -646,8 +646,3 @@ items:
       content: 'function listByEventHubNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-eventhub.EventHubManagementClient
-    name: EventHubManagementClient
-    fullName: azure-arm-eventhub.EventHubManagementClient
-    isExternal: false

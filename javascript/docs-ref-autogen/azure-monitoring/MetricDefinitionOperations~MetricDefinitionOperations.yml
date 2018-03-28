@@ -35,7 +35,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-monitoring.MetricsClient
+            - undefinedMetricsClient
           description: Reference to the service client.
       content: new MetricDefinitionOperations(client)
     langs:

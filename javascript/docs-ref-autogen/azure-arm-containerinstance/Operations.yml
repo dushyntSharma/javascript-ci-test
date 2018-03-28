@@ -31,7 +31,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-containerinstance.ContainerInstanceManagementClient
+            - undefinedContainerInstanceManagementClient
           description: Reference to the service client.
       content: new Operations(client)
     langs:
@@ -117,8 +117,3 @@ items:
       content: 'function list(options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-containerinstance.ContainerInstanceManagementClient
-    name: ContainerInstanceManagementClient
-    fullName: azure-arm-containerinstance.ContainerInstanceManagementClient
-    isExternal: false

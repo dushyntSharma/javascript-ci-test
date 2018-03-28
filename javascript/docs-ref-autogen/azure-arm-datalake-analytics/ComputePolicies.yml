@@ -49,8 +49,7 @@ items:
       parameters:
         - id: client
           type:
-            - >-
-              azure-arm-datalake-analytics.DataLakeAnalyticsAccountManagementClient
+            - undefinedDataLakeAnalyticsAccountManagementClient
           description: Reference to the service client.
       content: new ComputePolicies(client)
     langs:
@@ -799,8 +798,3 @@ items:
       content: 'function listByAccountNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-datalake-analytics.DataLakeAnalyticsAccountManagementClient
-    name: DataLakeAnalyticsAccountManagementClient
-    fullName: azure-arm-datalake-analytics.DataLakeAnalyticsAccountManagementClient
-    isExternal: false

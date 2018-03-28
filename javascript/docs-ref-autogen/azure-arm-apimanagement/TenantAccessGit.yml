@@ -37,7 +37,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-apimanagement.ApiManagementClient
+            - undefinedApiManagementClient
           description: Reference to the service client.
       content: new TenantAccessGit(client)
     langs:
@@ -358,8 +358,3 @@ items:
         optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-apimanagement.ApiManagementClient
-    name: ApiManagementClient
-    fullName: azure-arm-apimanagement.ApiManagementClient
-    isExternal: false

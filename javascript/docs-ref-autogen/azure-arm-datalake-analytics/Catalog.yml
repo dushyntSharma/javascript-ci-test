@@ -201,8 +201,7 @@ items:
       parameters:
         - id: client
           type:
-            - >-
-              azure-arm-datalake-analytics.DataLakeAnalyticsCatalogManagementClient
+            - undefinedDataLakeAnalyticsCatalogManagementClient
           description: Reference to the service client.
       content: new Catalog(client)
     langs:
@@ -8022,8 +8021,3 @@ items:
       content: 'function listDatabasesNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-datalake-analytics.DataLakeAnalyticsCatalogManagementClient
-    name: DataLakeAnalyticsCatalogManagementClient
-    fullName: azure-arm-datalake-analytics.DataLakeAnalyticsCatalogManagementClient
-    isExternal: false

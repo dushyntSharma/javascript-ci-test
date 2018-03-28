@@ -100,7 +100,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-iothub.IotHubClient
+            - undefinedIotHubClient
           description: Reference to the service client.
       content: new IotHubResource(client)
     langs:
@@ -3827,8 +3827,3 @@ items:
       content: 'function listKeysNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-iothub.IotHubClient
-    name: IotHubClient
-    fullName: azure-arm-iothub.IotHubClient
-    isExternal: false

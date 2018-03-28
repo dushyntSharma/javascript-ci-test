@@ -33,7 +33,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-insights.InsightsClient
+            - undefinedInsightsClient
           description: Reference to the service client.
       content: new TenantEvents(client)
     langs:
@@ -230,8 +230,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-insights.InsightsClient
-    name: InsightsClient
-    fullName: azure-insights.InsightsClient
-    isExternal: false

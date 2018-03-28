@@ -34,7 +34,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-recoveryservicesbackup.RecoveryServicesBackupClient
+            - undefinedRecoveryServicesBackupClient
           description: Reference to the service client.
       content: new SecurityPINs(client)
     langs:
@@ -141,8 +141,3 @@ items:
       content: 'function get(vaultName, resourceGroupName, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-recoveryservicesbackup.RecoveryServicesBackupClient
-    name: RecoveryServicesBackupClient
-    fullName: azure-arm-recoveryservicesbackup.RecoveryServicesBackupClient
-    isExternal: false

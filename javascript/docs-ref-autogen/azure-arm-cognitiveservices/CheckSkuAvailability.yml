@@ -35,7 +35,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-cognitiveservices.CognitiveServicesManagementClient
+            - undefinedCognitiveServicesManagementClient
           description: Reference to the service client.
       content: new CheckSkuAvailability(client)
     langs:
@@ -160,8 +160,3 @@ items:
       content: 'function list(location, skus, kind, type, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-cognitiveservices.CognitiveServicesManagementClient
-    name: CognitiveServicesManagementClient
-    fullName: azure-arm-cognitiveservices.CognitiveServicesManagementClient
-    isExternal: false

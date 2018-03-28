@@ -51,7 +51,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-website.WebSiteExtensionsClient
+            - undefinedWebSiteExtensionsClient
           description: Reference to the service client.
       content: new ContinuousWebJobOperations(client)
     langs:

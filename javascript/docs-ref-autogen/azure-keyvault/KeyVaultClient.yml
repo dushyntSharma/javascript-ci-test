@@ -343,7 +343,7 @@ items:
       parameters:
         - id: credentials
           type:
-            - azure-keyvault.credentials
+            - undefinedcredentials
           description: Credentials needed for the client to connect to Azure.
         - id: options
           type:
@@ -7349,7 +7349,7 @@ items:
       parameters:
         - id: credentials
           type:
-            - azure-keyvault.credentials
+            - undefinedcredentials
           description: Credentials needed for the client to connect to Azure.
         - id: options
           type:

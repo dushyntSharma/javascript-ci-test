@@ -68,7 +68,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-sql.SqlManagementClient
+            - undefinedSqlManagementClient
           description: Reference to the service client.
       content: new SyncGroups(client)
     langs:
@@ -2618,8 +2618,3 @@ items:
       content: 'function listByDatabaseNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-sql.SqlManagementClient
-    name: SqlManagementClient
-    fullName: azure-arm-sql.SqlManagementClient
-    isExternal: false

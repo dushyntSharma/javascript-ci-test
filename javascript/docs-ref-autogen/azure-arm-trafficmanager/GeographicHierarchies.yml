@@ -35,7 +35,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-trafficmanager.TrafficManagerManagementClient
+            - undefinedTrafficManagerManagementClient
           description: Reference to the service client.
       content: new GeographicHierarchies(client)
     langs:
@@ -125,8 +125,3 @@ items:
       content: 'function getDefault(options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-trafficmanager.TrafficManagerManagementClient
-    name: TrafficManagerManagementClient
-    fullName: azure-arm-trafficmanager.TrafficManagerManagementClient
-    isExternal: false

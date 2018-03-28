@@ -3,7 +3,7 @@ items:
   - uid: azure-arm-batchai.File
     id: azure-arm-batchai.File
     name: File
-    summary: Properties of the file.
+    summary: Properties of the file or directory.
     fullName: azure-arm-batchai.File
     source:
       id: azure-arm-batchai.File

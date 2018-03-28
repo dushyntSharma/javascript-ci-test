@@ -31,7 +31,7 @@ items:
       parameters:
         - id: credentials
           type:
-            - azure-graph.credentials
+            - undefinedcredentials
           description: Credentials needed for the client to connect to Azure.
         - id: tenantID
           type:

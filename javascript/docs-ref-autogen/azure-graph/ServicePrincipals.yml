@@ -51,7 +51,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-graph.GraphRbacManagementClient
+            - undefinedGraphRbacManagementClient
           description: Reference to the service client.
       content: new ServicePrincipals(client)
     langs:
@@ -938,8 +938,3 @@ items:
       content: 'function listNext(nextLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-graph.GraphRbacManagementClient
-    name: GraphRbacManagementClient
-    fullName: azure-graph.GraphRbacManagementClient
-    isExternal: false

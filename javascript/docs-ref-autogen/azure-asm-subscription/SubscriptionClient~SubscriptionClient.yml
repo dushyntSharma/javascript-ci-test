@@ -33,7 +33,7 @@ items:
       parameters:
         - id: credentials
           type:
-            - azure-asm-subscription.CloudCredentials
+            - undefinedCloudCredentials
           description: "Credentials used to authenticate\rrequests."
         - id: baseUri
           type:

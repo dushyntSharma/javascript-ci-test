@@ -35,7 +35,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-marketplaceordering.MarketplaceOrderingAgreements
+            - undefinedMarketplaceOrderingAgreements
           description: Reference to the service client.
       content: new Operations(client)
     langs:
@@ -213,8 +213,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-marketplaceordering.MarketplaceOrderingAgreements
-    name: MarketplaceOrderingAgreements
-    fullName: azure-arm-marketplaceordering.MarketplaceOrderingAgreements
-    isExternal: false

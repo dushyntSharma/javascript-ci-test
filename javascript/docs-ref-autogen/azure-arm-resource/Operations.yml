@@ -34,7 +34,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-resource.ManagementGroupsClient
+            - undefinedManagementGroupsClient
           description: Reference to the service client.
       content: new Operations(client)
     langs:
@@ -211,8 +211,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-resource.ManagementGroupsClient
-    name: ManagementGroupsClient
-    fullName: azure-arm-resource.ManagementGroupsClient
-    isExternal: false

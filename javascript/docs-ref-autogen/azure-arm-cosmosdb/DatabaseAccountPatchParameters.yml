@@ -9,7 +9,7 @@ items:
       id: azure-arm-cosmosdb.DatabaseAccountPatchParameters
       path: >-
         lib\services\cosmosdbManagement\lib\models\databaseAccountPatchParameters.js
-      startLine: 17
+      startLine: 19
       remote:
         branch: master
         path: >-

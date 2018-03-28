@@ -41,7 +41,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-search.SearchManagementClient
+            - undefinedSearchManagementClient
           description: Reference to the service client.
       content: new Services(client)
     langs:
@@ -928,8 +928,3 @@ items:
         service, options, optionalCallback)
     langs:
       - js
-references:
-  - uid: azure-arm-search.SearchManagementClient
-    name: SearchManagementClient
-    fullName: azure-arm-search.SearchManagementClient
-    isExternal: false

@@ -30,7 +30,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-asm-sb.ServiceBusManagementClient
+            - undefinedServiceBusManagementClient
           description: Reference to the service client.
       content: new RelayOperations(client)
     langs:

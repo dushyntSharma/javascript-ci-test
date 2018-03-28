@@ -35,7 +35,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-eventgrid.EventGridManagementClient
+            - undefinedEventGridManagementClient
           description: Reference to the service client.
       content: new TopicTypes(client)
     langs:
@@ -304,8 +304,3 @@ items:
       content: 'function listEventTypes(topicTypeName, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-eventgrid.EventGridManagementClient
-    name: EventGridManagementClient
-    fullName: azure-arm-eventgrid.EventGridManagementClient
-    isExternal: false

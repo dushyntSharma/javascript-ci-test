@@ -64,7 +64,7 @@ items:
       parameters:
         - id: client
           type:
-            - azure-arm-rediscache.RedisManagementClient
+            - undefinedRedisManagementClient
           description: Reference to the service client.
       content: new Redis(client)
     langs:
@@ -2287,8 +2287,3 @@ items:
       content: 'function listNext(nextPageLink, options, optionalCallback)'
     langs:
       - js
-references:
-  - uid: azure-arm-rediscache.RedisManagementClient
-    name: RedisManagementClient
-    fullName: azure-arm-rediscache.RedisManagementClient
-    isExternal: false
